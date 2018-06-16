@@ -1,1 +1,56 @@
-<span>{{$ctrl.test}}</span>
+<a class='goBackArrow' href="#!/characters">Character reselect <i id="gobackarrow"class="material-icons">arrow_back</i> </a>
+
+<div class='characterImage'>
+ <img src="" alt="">
+ <span>{{$ctrl.characterName}}</span>
+</div>
+
+<div class='answer1'>
+ {{$ctrl.quizEvents[0]}}
+ <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[0].value">
+ <i ng-if="$ctrl.grade[0] === true" class="material-icons">
+ check
+ </i>
+ <i ng-if="$ctrl.grade[0] === false" class="material-icons">
+ close
+ </i>
+ <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[0]}}</div>
+</div>
+
+<div class='answer2'>
+ {{$ctrl.quizEvents[1]}}
+ <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[1].value">
+ <i ng-if="$ctrl.grade[1] === true" class="material-icons">
+ check
+ </i>
+ <i ng-if="$ctrl.grade[1] === false" class="material-icons">
+ close
+ </i>
+ <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[1]}}</div>
+</div>
+
+<div class='answer3'>
+ {{$ctrl.quizEvents[2]}}
+ <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[2].value">
+ <i ng-if="$ctrl.grade[2] === true" class="material-icons">
+ check
+ </i>
+ <i ng-if="$ctrl.grade[2] === false" class="material-icons">
+ close
+ </i>
+ <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[2]}}</div>
+</div>
+
+<div class='answer4'>
+ {{$ctrl.quizEvents[3]}}
+ <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[3].value">
+ <i ng-if="$ctrl.grade[3] === true" class="material-icons">
+ check
+ </i>
+ <i ng-if="$ctrl.grade[3] === false" class="material-icons">
+ close
+ </i>
+ <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[3]}}</div>
+</div>
+
+<button ng-click="$ctrl.finalize()">Final Answer</button>

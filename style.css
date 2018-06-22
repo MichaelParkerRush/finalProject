@@ -4,3 +4,41 @@
 	width: 99vw;
 	height: 95vh;
 }
+
+body {
+	background-color: #dbdada;
+}
+
+.questions {
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	text-align: center;
+}
+
+.answer {
+	width: 144px;
+}
+
+.char-select {
+	display: flex;
+	justify-content: space-around;
+	width: 95vw;
+	position: relative;
+	text-align: center;
+	flex-flow: wrap;
+}
+
+.char-img {
+	
+}
+
+.char-text {
+	display: block;
+}
+
+@media only screen and (min-width: 757px) {
+	.char-select {
+		width: 719px;
+	}
+}

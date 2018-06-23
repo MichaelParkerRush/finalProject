@@ -1,44 +1,102 @@
-
+@font-face {
+	font-family: bebas;
+	src: url(fonts/BEBAS.ttf);
+}
 
 .enter {
+	background: url(images-marvel/marvel-mobile-version.jpg) no-repeat;
+	background-size: 100% auto;
 	width: 99vw;
 	height: 95vh;
 }
 
+div {
+	/* background-color: rgba(255,255,255,0.75); */
+}
+
 body {
-	background-color: #dbdada;
+	background-image: url(images-marvel/marvel-background.jpg);
+	font-family: sans-serif;
+}
+
+.bebas {
+	font-family: bebas;
+}
+.red-text {
+	text-shadow: -0.5px -0.5px 0 #F00, 0.5px -0.5px 0 #F00, -0.5px 0.5px 0 #F00, 0.5px 0.5px 0 #F00;
+}
+.centered {
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.rules {
+	width: 50vw;
+	background-color: rgba(255,255,255,0.75);
+}
+
+.button {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .questions {
 	display: flex;
 	justify-content: space-around;
 	margin: auto;
+	max-width: 400px;
 	text-align: center;
+	flex-flow: wrap;
 }
 
 .answer {
 	width: 144px;
+	padding: 5px;
+	margin: 10px 0px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.75);
 }
 
 .char-select {
 	display: flex;
 	justify-content: space-around;
 	width: 95vw;
-	position: relative;
-	text-align: center;
 	flex-flow: wrap;
 }
 
 .char-img {
-	
+	background-color: rgba(255,255,255,0.75);
+	width: 144px;
+	margin: 5px;
 }
 
 .char-text {
 	display: block;
 }
 
+.g {
+	color: limegreen;
+	font-weight: 700;
+}
+.r {
+	color: red;
+	font-weight: 700;
+}
+
 @media only screen and (min-width: 757px) {
+	.enter {
+		background-image: url(images-marvel/MarvelWelcomeImage.jpg);
+	}
 	.char-select {
 		width: 719px;
+	}
+	.answer {
+		width: 288px;
+	}
+	.questions {
+		max-width: 800px;
 	}
 }

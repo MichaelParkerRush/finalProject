@@ -1,41 +1,41 @@
 <a class='goBackArrow' href="#!/characters">Character reselect <i id="gobackarrow"class="material-icons">arrow_back</i> </a>
 
-<div class='characterImage'>
+<div class='char-img centered'>
  <img src="{{$ctrl.characterImg}}" alt="({{$ctrl.characterName}} thumbnail)">
- <span>{{$ctrl.characterName}}</span>
+ <span class="char-text">{{$ctrl.characterName}}</span>
 </div>
 <div ng-if="!$ctrl.loaded">Loading...</div>
 <div class="questions">
 	<div ng-if="$ctrl.loaded" class='answer'>
 	 {{$ctrl.quizEvents[0]}}<br>
 	 <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[0].value"><br>
-	 <span ng-if="$ctrl.grade[0] === true">Correct<br></span>
-	 <span ng-if="$ctrl.grade[0] === false">Incorrect<br></span>
+	 <span class="g" ng-if="$ctrl.grade[0] === true">Correct<br></span>
+	 <span class="r" ng-if="$ctrl.grade[0] === false">Incorrect<br></span>
 	 <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[0]}}</div>
 	</div>
 
 	<div ng-if="$ctrl.loaded" class='answer'>
 	 {{$ctrl.quizEvents[1]}}<br>
 	 <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[1].value"><br>
-	 <span ng-if="$ctrl.grade[1] === true">Correct<br></span>
-	 <span ng-if="$ctrl.grade[1] === false">Incorrect<br></span>
+	 <span class="g" ng-if="$ctrl.grade[1] === true">Correct<br></span>
+	 <span class="r" ng-if="$ctrl.grade[1] === false">Incorrect<br></span>
 	 <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[1]}}</div>
 	</div>
 
 	<div ng-if="$ctrl.loaded" class='answer'>
 	 {{$ctrl.quizEvents[2]}}<br>
 	 <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[2].value"><br>
-	 <span ng-if="$ctrl.grade[2] === true">Correct<br></span>
-	 <span ng-if="$ctrl.grade[2] === false">Incorrect<br></span>
+	 <span class="g" ng-if="$ctrl.grade[2] === true">Correct<br></span>
+	 <span class="r" ng-if="$ctrl.grade[2] === false">Incorrect<br></span>
 	 <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[2]}}</div>
 	</div>
 
 	<div ng-if="$ctrl.loaded" class='answer'>
 	 {{$ctrl.quizEvents[3]}}<br>
 	 <input class='checkbox' type='checkbox' ng-model="$ctrl.checkboxModel[3].value"><br>
-	 <span ng-if="$ctrl.grade[3] === true">Correct<br></span>
-	 <span ng-if="$ctrl.grade[3] === false">Incorrect<br></span>
+	 <span class="g" ng-if="$ctrl.grade[3] === true">Correct<br></span>
+	 <span class="r" ng-if="$ctrl.grade[3] === false">Incorrect<br></span>
 	 <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[3]}}</div>
 	</div>
 </div>
-<button ng-click="$ctrl.finalize()">Final Answer</button>
+<button class="centered" ng-click="$ctrl.finalize()">Final Answer</button>

@@ -1,10 +1,10 @@
-<a class='goBackArrow' href="#!/characters">Character reselect <i id="gobackarrow"class="material-icons">arrow_back</i> </a>
+<h3 class="nav"><a class='goBackArrow' href="#!/characters">Character reselect <i id="gobackarrow"class="material-icons">arrow_back</i> </a></h3>
 
 <div class='char-img centered'>
  <img src="{{$ctrl.characterImg}}" alt="({{$ctrl.characterName}} thumbnail)">
  <span class="char-text">{{$ctrl.characterName}}</span>
 </div>
-<div ng-if="!$ctrl.loaded">Loading...</div>
+<div class="centered" ng-if="!$ctrl.loaded">Loading...</div>
 <div class="questions">
 	<div ng-if="$ctrl.loaded" class='answer'>
 	 {{$ctrl.quizEvents[0]}}<br>
@@ -38,4 +38,4 @@
 	 <div ng-if="$ctrl.grade">{{$ctrl.eventDescription[3]}}</div>
 	</div>
 </div>
-<button class="centered" ng-click="$ctrl.finalize()">Final Answer</button>
+<button class="centered button bebas" ng-click="$ctrl.finalize()">Final&ensp;Answer</button>

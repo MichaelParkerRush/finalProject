@@ -20,7 +20,7 @@
 					$ctrl.quizEvents = response.data.data.results.map(function(path){
 						return path.title;
 					});
-					console.log($ctrl.quizEvents);
+					console.log("First response back!");
 					$ctrl.quizIds = response.data.data.results.map(function(path){
 						return path.id;
 					});
@@ -48,7 +48,7 @@
 						if(responses[3].data.data.count){
 							$ctrl.answerkey[3] = true;
 						}
-						console.log($ctrl.answerkey);
+						console.log("All responses back!");
 						$ctrl.finalize = function(){
 							$ctrl.useranswers = $ctrl.checkboxModel.map(function(object){
 								return object.value;
